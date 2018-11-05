@@ -6,10 +6,23 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.php">
-        <img src="https://via.placeholder.com/150" width="30" height="30" class="d-inline-block align-top" alt="Company Logo">
-        Bootstrap
-      </a>
-      <a href="index.php">test</a>
+    <nav class="navbar navbar-dark bg-dark justify-content-center">
+      <div class="container">
+        <?php if($custom_logo): ?>
+          <a class="navbar-brand" href="<?= bloginfo('home');?>">
+            <img src="<?= $logo_url  ?>" height="50" alt="<?= bloginfo('name');  ?>">
+          </a>
+        <?php else: ?>
+          <a class="navbar-brand" href="<?= bloginfo('home');?>"><?= bloginfo('name');  ?></a>
+        <?php endif; ?>
+        <?php wp_nav_menu( array (
+          'theme_location'    => 'header_nav',
+          'depth'             => 2,
+          'container'         => 'div',
+          'container_class'   => 'collapse navbar-collapse ',
+          'container_id'      => 'bs-example-navbar-collapse-1',
+          'menu_class'        => 'nav navbar-nav justify-content-around w-100',
+          'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback'
+        ) ); ?>
+      </div>
     </nav>

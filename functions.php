@@ -11,3 +11,11 @@
   }
 
   add_action('wp_enqueue_scripts', 'addCustomThemeStyles');
+
+  function addCustomMenus() {
+    add_theme_support('menus');
+    register_nav_menu('header_nav', 'This is the navigation at the top of the page');
+    register_nav_menu('footer_nav', 'This is the navigation at the bottom of the page');
+  }
+
+  add_action('init', 'addCustomMenus');
