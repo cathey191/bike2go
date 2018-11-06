@@ -2,12 +2,15 @@
 
   <div class="container">
     <h2>Catourage</h2>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="row">
+      <div class="col">
+        <?php if(have_posts()): ?>
+          <div class="card-columns">
+            <?php while(have_posts()): the_post();?>
+              <?php get_template_part('content', get_post_format()); ?>
+            <?php endwhile; ?>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
