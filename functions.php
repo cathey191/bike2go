@@ -21,3 +21,5 @@
   add_action('init', 'addCustomMenus');
 
   add_theme_support( 'post-thumbnails' );
+
+  require get_parent_theme_file_path('./addons/custom_post_types.php');
