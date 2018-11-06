@@ -16,13 +16,8 @@
           <a class="navbar-brand" href="<?= bloginfo('home');?>"><?= bloginfo('name');  ?></a>
         <?php endif; ?>
         <?php wp_nav_menu( array (
-          'theme_location'    => 'header_nav',
-          'depth'             => 2,
-          'container'         => 'div',
-          'container_class'   => 'collapse navbar-collapse ',
-          'container_id'      => 'bs-example-navbar-collapse-1',
-          'menu_class'        => 'nav navbar-nav justify-content-around w-100',
-          'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback'
+          'theme_locaiton' => 'header_nav',
+          'menu_id' => 'header_nav' 
         ) ); ?>
       </div>
     </nav>

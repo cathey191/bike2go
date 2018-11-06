@@ -34,3 +34,21 @@
   transform: translateX(0);
 
 }
+
+#header_nav {
+  list-style-type: none;
+}
+
+#header_nav li {
+  float: left;
+}
+
+#header_nav li a {
+  display: block;
+  padding: 14px 16px;
+  color: #808e9b;
+}
+
+#header_nav li a:hover {
+  color: white;
+}

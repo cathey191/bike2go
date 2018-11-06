@@ -19,3 +19,5 @@
   }
 
   add_action('init', 'addCustomMenus');
+
+  add_theme_support( 'post-thumbnails' );
