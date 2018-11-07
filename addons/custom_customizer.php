@@ -62,6 +62,50 @@
       'settings' => 'footer_text_color_setting'
     )));
 
+    $wp_customize->add_setting('card_background_color_setting', array(
+      'default' => '#808e9b',
+      'transport' => 'refresh'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'card_background_color_control', array(
+      'label' => __('Card Background Colour', 'bike2gocustomtheme'),
+      'section' => 'custom_theme_colours',
+      'settings' => 'card_background_color_setting'
+    )));
+
+    $wp_customize->add_setting('card_text_color_setting', array(
+      'default' => '#343a40',
+      'transport' => 'refresh'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'card_text_color_control', array(
+      'label' => __('Card Text Colour', 'bike2gocustomtheme'),
+      'section' => 'custom_theme_colours',
+      'settings' => 'card_text_color_setting'
+    )));
+
+    $wp_customize->add_setting('main_button_background_color_setting', array(
+      'default' => '#5c8c5b',
+      'transport' => 'refresh'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'main_button_background_color_control', array(
+      'label' => __('Main Button Background Colour', 'bike2gocustomtheme'),
+      'section' => 'custom_theme_colours',
+      'settings' => 'main_button_background_color_setting'
+    )));
+
+    $wp_customize->add_setting('main_button_text_color_setting', array(
+      'default' => '#0f540b',
+      'transport' => 'refresh'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'main_button_text_color_control', array(
+      'label' => __('Main Button Text Colour', 'bike2gocustomtheme'),
+      'section' => 'custom_theme_colours',
+      'settings' => 'main_button_text_color_setting'
+    )));
+
     // Footer
     $wp_customize->add_section('custom_theme_footer_info', array(
       'title' => __('Footer', 'bike2gocustomtheme'),
@@ -125,6 +169,17 @@
 
         .footer p {
           color: <?= get_theme_mod('footer_text_color_setting', '#808e9b'); ?>!important;
+        }
+
+        .card {
+          color: <?= get_theme_mod('card_text_color_setting', '#343a40'); ?>!important;
+          background-color: <?= get_theme_mod('card_background_color_setting', '#808e9b'); ?>!important;
+        }
+
+        .btn-primary {
+          color: <?= get_theme_mod('main_button_text_color_setting', '#0f540b'); ?>!important;
+          background-color: <?= get_theme_mod('main_button_background_color_setting', '#5c8c5b'); ?>!important;
+          border-color: <?= get_theme_mod('main_button_text_color_setting', '#0f540b'); ?>!important;
         }
       </style>
     <?php

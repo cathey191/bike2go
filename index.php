@@ -1,7 +1,6 @@
 <?php get_header('header.php'); ?>
 
   <div class="container">
-    <h2>Text To Be Added</h2>
     <div class="row">
       <div class="col">
         <div class="card-columns">
