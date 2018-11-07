@@ -31,7 +31,7 @@
 
     // Footer
     $wp_customize->add_section('custom_theme_footer_info', array(
-      'title' => __('Footer Info', 'bike2gocustomtheme'),
+      'title' => __('Footer', 'bike2gocustomtheme'),
       'priority' => 20
     ));
 
